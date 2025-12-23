@@ -1,0 +1,24 @@
+{
+    "name":"Leetcode Complexity Analyzer",
+    "version":"1.0.0",
+    "description":"Analyzes the time and space complexity of Leetcode problems",
+    "author":"Kirti Anand",
+    "manifest_version":3,
+    "permissions":[
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "background":{
+        "service_worker":"background.js"
+    },
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://leetcode.com/problems/*"],
+            "js":["content_script.js"]
+        }
+    ]
+}
